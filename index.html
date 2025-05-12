@@ -13,67 +13,86 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background: linear-gradient(to bottom right, #f3f3f3, #e7e7e7);
       color: #333;
     }
 
     header {
       position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('Flux_Dev_a_lush_3d_render_of_A_clean_minimalist_illustration_o_2.jpg') no-repeat center center/cover;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
     }
 
     nav {
-      position: absolute;
-      top: 20px;
-      right: 40px;
+      margin-top: 10px;
     }
 
     nav a {
-      margin-left: 20px;
       text-decoration: none;
+      margin-left: 10px;
+      background-color: #333;
       color: white;
-      font-weight: bold;
-      padding: 10px 20px;
-      background-color: rgba(0, 0, 0, 0.6);
+      padding: 8px 16px;
       border-radius: 5px;
-      transition: 0.3s;
+      font-weight: 600;
+      transition: background-color 0.3s;
     }
 
     nav a:hover {
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: #555;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .image-container img {
+      width: 400px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     .content {
-      padding: 60px 20px;
       text-align: center;
+      padding: 40px 20px;
     }
 
     .content h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 15px;
     }
 
     .content p {
+      font-size: 18px;
       max-width: 600px;
       margin: 0 auto;
-      font-size: 18px;
       line-height: 1.6;
     }
   </style>
 </head>
 <body>
+
   <header>
+    <div></div> <!-- Empty div for spacing -->
     <nav>
       <a href="about.html">About Me</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <div class="content">
-    <h2>Placeholder Section</h2>
-    <p>This is a placeholder for additional content. You can add text, buttons, or sections here later.</p>
+  <div class="image-container">
+    <img src="Flux_Dev_a_lush_3d_render_of_A_clean_minimalist_illustration_o_2.jpg" alt="Scales of Justice">
   </div>
+
+  <div class="content">
+    <h2>Welcome to Justice</h2>
+    <p>This is a placeholder section for your website. You can add your mission statement, services, or anything else you'd like.</p>
+  </div>
+
 </body>
 </html>
