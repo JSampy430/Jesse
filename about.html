@@ -3,80 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me</title>
+  <title>About Me - Paralegal</title>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #f9f2e9, #f0e8dc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #f8f6f2, #e7e2dc);
       color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease-in;
     }
 
-    header {
-      padding: 20px;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .container {
       text-align: center;
-    }
-
-    a {
-      text-decoration: none;
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    a:hover {
-      background-color: #555;
-    }
-
-    .about-container {
       max-width: 800px;
-      margin: 60px auto;
-      text-align: center;
-      padding: 0 20px;
     }
 
-    .profile-pic {
-      width: 160px;
-      height: 160px;
+    .profile-img {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-bottom: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 15px;
+      font-size: 2em;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 17px;
-      line-height: 1.6;
-      color: #555;
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      margin-top: 30px;
+      text-decoration: none;
+      background-color: #444;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #222;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <a href="index.html">← Back to Home</a>
-  </header>
-
-  <div class="about-container">
-    <img src="imageJes.jpg" alt="Profile Picture" class="profile-pic" />
+  <div class="container">
+    <img src="profile.jpg" alt="Profile Photo" class="profile-img" />
     <h1>About Me</h1>
     <p>
-      This is a placeholder biography section. You can talk about your experience, mission, professional background, or anything personal you want to share. Keep it clean, focused, and true to who you are.
+      Welcome. My name is [Your Name], and I’m a licensed paralegal committed to helping people navigate legal matters with confidence.
+      I specialize in notary services, commissioner of oaths, small claims, traffic court, and tribunal representation.
     </p>
+    <p>
+      Whether you’re contesting a ticket, handling a civil dispute, or simply need legal guidance, I offer clear consultations and
+      thorough document support. My goal is to make the legal process less overwhelming, and more accessible.
+    </p>
+    <p>
+      With professionalism, care, and dedication to results, I’m here to support your legal journey—one step at a time.
+    </p>
+    <a href="index.html" class="back-button">← Back to Home</a>
   </div>
-
 </body>
 </html>
