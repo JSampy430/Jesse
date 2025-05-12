@@ -3,47 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legal Research</title>
+  <title>Document Drafting - Justice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #f9f2e9, #f0e8dc);
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #f3eee7, #e2d6cc);
       color: #333;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 50px 20px;
     }
 
-    a {
-      text-decoration: none;
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    a:hover {
-      background-color: #555;
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease;
     }
 
     h1 {
+      font-size: 32px;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     p {
       font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .service-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #f9f6f2;
+      padding: 25px 20px;
+      border-radius: 10px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .back-home a {
+      display: inline-block;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .back-home a:hover {
+      background-color: #555;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .service-cards {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <a href="index.html">← Back to Home</a>
+  <div class="container">
+    <h1>Document Drafting Services</h1>
+    <p>
+      From legally binding agreements to personal declarations, I offer precise and reliable drafting services to ensure your documents are clear, accurate, and properly structured.
+    </p>
 
-  <h1>Legal Research</h1>
-  <p>This is a placeholder page for your Legal Research services. You can describe your process, tools, and areas of expertise here.</p>
+    <div class="service-cards">
+      <div class="card">
+        <h3>True Statements</h3>
+        <p>Drafting personal or sworn statements for legal or administrative use.</p>
+      </div>
+      <div class="card">
+        <h3>Warrant Statements</h3>
+        <p>Preparation of legal documents supporting applications for warrants or investigations.</p>
+      </div>
+      <div class="card">
+        <h3>Translations</h3>
+        <p>Certified translations of legal documents to or from English, if required.</p>
+      </div>
+      <div class="card">
+        <h3>Testaments & Wills</h3>
+        <p>Drafting of last wills, testaments, or related estate documents.</p>
+      </div>
+      <div class="card">
+        <h3>Notarization</h3>
+        <p>Official notarization of documents, declarations, and affirmations.</p>
+      </div>
+      <div class="card">
+        <h3>Apostille Preparation</h3>
+        <p>Assistance preparing documents for international use requiring apostille certification.</p>
+      </div>
+    </div>
+
+    <div class="back-home">
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </div>
 
 </body>
 </html>
