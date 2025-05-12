@@ -20,15 +20,9 @@
     }
 
     header {
-      position: relative;
       padding: 20px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    nav {
-      margin-top: 10px;
     }
 
     nav a {
@@ -50,7 +44,7 @@
       display: flex;
       justify-content: center;
       margin-top: 30px;
-      animation: fadeIn 1.5s ease;
+      animation: zoomIn 1.2s ease;
     }
 
     .image-container img {
@@ -63,7 +57,7 @@
     .content {
       text-align: center;
       padding: 50px 20px 20px;
-      animation: fadeIn 2s ease;
+      animation: fadeInLeft 1.2s ease;
     }
 
     .content h2 {
@@ -88,11 +82,11 @@
 
     .bio {
       text-align: center;
-      padding: 80px 20px 80px;
+      padding: 80px 20px;
       max-width: 700px;
       margin: 0 auto;
       border-top: 1px solid #ddd;
-      animation: fadeInUp 2s ease;
+      animation: zoomIn 1.2s ease;
     }
 
     .bio-img {
@@ -120,7 +114,6 @@
       padding: 80px 20px;
       max-width: 1000px;
       margin: 0 auto;
-      animation: fadeInUp 2s ease;
     }
 
     .services h3 {
@@ -142,12 +135,16 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 280px;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: slideUp 1s forwards;
     }
 
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    .service-card:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .service-card:nth-child(3) {
+      animation-delay: 0.4s;
     }
 
     .service-card h4 {
@@ -170,25 +167,53 @@
       cursor: pointer;
       font-weight: bold;
       transition: background-color 0.3s;
+      animation: pulse 2s infinite;
     }
 
     .service-card button:hover {
       background-color: #555;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
+    /* Animations */
+    @keyframes fadeInLeft {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateX(-30px);
       }
       to {
         opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.85);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
         transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
       }
     }
   </style>
@@ -210,7 +235,7 @@
   <div class="content">
     <h2>Welcome to Justice</h2>
     <p>
-      Providing trusted paralegal services with a focus on clarity, fairness, and results. From legal research to representation in small claims and tribunals, we help you move forward with confidence.
+      Providing trusted paralegal services with a focus on clarity, fairness, and results. We help you navigate legal matters with confidence and integrity.
     </p>
     <div class="quote">
       “Any man can make mistakes, but only an idiot persists in his error. Glory follows virtue as if it were its shadow.”<br>— Cicero
