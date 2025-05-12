@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Justice Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,9 +13,10 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: linear-gradient(to bottom, #f9f2e9, #f0e8dc);
       color: #333;
+      overflow-x: hidden;
     }
 
     header {
@@ -48,6 +50,7 @@
       display: flex;
       justify-content: center;
       margin-top: 30px;
+      animation: fadeIn 1.5s ease;
     }
 
     .image-container img {
@@ -60,6 +63,7 @@
     .content {
       text-align: center;
       padding: 50px 20px 20px;
+      animation: fadeIn 2s ease;
     }
 
     .content h2 {
@@ -74,12 +78,21 @@
       line-height: 1.7;
     }
 
+    .quote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.2em;
+      color: #555;
+      margin-top: 20px;
+    }
+
     .bio {
       text-align: center;
       padding: 80px 20px 80px;
       max-width: 700px;
       margin: 0 auto;
       border-top: 1px solid #ddd;
+      animation: fadeInUp 2s ease;
     }
 
     .bio-img {
@@ -107,6 +120,7 @@
       padding: 80px 20px;
       max-width: 1000px;
       margin: 0 auto;
+      animation: fadeInUp 2s ease;
     }
 
     .services h3 {
@@ -128,6 +142,12 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 280px;
       text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .service-card h4 {
@@ -155,6 +175,22 @@
     .service-card button:hover {
       background-color: #555;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
@@ -173,7 +209,12 @@
 
   <div class="content">
     <h2>Welcome to Justice</h2>
-    <p>This section is a placeholder for your message, mission, or purpose. Clean design, elegant visuals, and strong values — that’s what this site stands for.</p>
+    <p>
+      This section is a placeholder for your message, mission, or purpose. Clean design, elegant visuals, and strong values — that’s what this site stands for.
+    </p>
+    <div class="quote">
+      “Any man can make mistakes, but only an idiot persists in his error. Glory follows virtue as if it were its shadow.”<br>— Cicero
+    </div>
   </div>
 
   <div class="bio">
