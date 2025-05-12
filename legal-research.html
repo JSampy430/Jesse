@@ -3,47 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legal Research</title>
+  <title>Legal Research - Justice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #f9f2e9, #f0e8dc);
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #f1ede7, #e2d9ce);
       color: #333;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 50px 20px;
     }
 
-    a {
-      text-decoration: none;
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    a:hover {
-      background-color: #555;
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease;
     }
 
     h1 {
+      font-size: 32px;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     p {
       font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .category-card {
+      background-color: #f9f6f2;
+      padding: 25px 20px;
+      border-radius: 10px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .category-card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .category-card p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .categories {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <a href="index.html">← Back to Home</a>
+  <div class="container">
+    <h1>Legal Research Services</h1>
+    <p>
+      Accurate, detailed legal research is the foundation of any successful legal strategy.
+      I provide clear and dependable research tailored to your situation — whether you're dealing with criminal charges, civil issues, or general legal inquiries.
+    </p>
 
-  <h1>Legal Research</h1>
-  <p>This is a placeholder page for your Legal Research services. You can describe your process, tools, and areas of expertise here.</p>
+    <div class="categories">
+      <div class="category-card">
+        <h3>Criminal Code</h3>
+        <p>
+          Research on current and historical statutes, legal definitions, and case precedents under the Canadian Criminal Code.
+        </p>
+      </div>
+      <div class="category-card">
+        <h3>Civil Matters</h3>
+        <p>
+          Support for disputes involving contracts, property, small claims, or landlord-tenant conflicts — with thorough case law and statute reviews.
+        </p>
+      </div>
+      <div class="category-card">
+        <h3>Other Inquiries</h3>
+        <p>
+          General research for administrative tribunals, regulatory bodies, and unique legal questions that require a tailored approach.
+        </p>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
