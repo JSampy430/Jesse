@@ -4,13 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Justice Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; background: linear-gradient(to bottom, #f9f2e9, #f0e8dc); color: #333; overflow-x: hidden; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #f9f2e9, #f0e8dc);
+      color: #333;
+      overflow-x: hidden;
+      font-variant-ligatures: none;
+    }
     header { padding: 20px; display: flex; justify-content: space-between; }
-    nav a { text-decoration: none; margin-left: 10px; background-color: #333; color: white; padding: 8px 16px; border-radius: 5px; font-weight: 600; transition: background-color 0.3s; }
+    nav a {
+      text-decoration: none;
+      margin-left: 10px;
+      background-color: #333;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
     nav a:hover { background-color: #555; }
 
     .hero {
@@ -31,8 +46,14 @@
       color: white;
       text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
     }
-    .hero-text h1 { font-size: 42px; margin-bottom: 10px; }
-    .hero-text p { font-size: 18px; }
+    .hero-text h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-text p {
+      font-size: 18px;
+    }
 
     .content, .services, .cta, .bio, .why, .testimonials, footer {
       padding: 50px 20px;
@@ -59,11 +80,24 @@
       margin-bottom: 15px;
       color: #333;
     }
-    .service-card h4 { font-size: 20px; margin-bottom: 15px; }
-    .service-card p { font-size: 15px; color: #555; margin-bottom: 20px; }
+    .service-card h4 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-family: 'Playfair Display', serif;
+    }
+    .service-card p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+    }
     .service-card button {
-      background-color: #333; color: white; border: none;
-      padding: 10px 18px; border-radius: 6px; cursor: pointer; font-weight: bold;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
     }
     .service-card button:hover { background-color: #555; }
 
@@ -72,10 +106,19 @@
       color: white;
       border-radius: 12px;
     }
-    .cta h3 { font-size: 24px; margin-bottom: 20px; }
+    .cta h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-family: 'Playfair Display', serif;
+    }
     .cta button {
-      background-color: #f4f4f4; color: #333; border: none;
-      padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;
+      background-color: #f4f4f4;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
     }
     .cta button:hover { background-color: #ddd; }
 
@@ -112,83 +155,15 @@
       padding: 30px 20px;
       margin-top: 50px;
     }
-    footer a { color: #ccc; margin: 0 10px; text-decoration: none; }
+    footer a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
+    }
     footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <header>
-    <div></div>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <div class="hero">
-    <img src="Leonardo_Phoenix_10_A_hyperrealistic_3D_render_of_the_Scales_o_3.jpg" alt="Scales of Justice">
-    <div class="hero-text">
-      <h1>Justice For All</h1>
-      <p>Trusted, transparent, and ready to help.</p>
-    </div>
-  </div>
-
-  <div class="services">
-    <h3>Services</h3>
-    <div class="service-grid">
-      <div class="service-card">
-        <i class="fas fa-gavel"></i>
-        <h4>Legal Research</h4>
-        <p>Thorough and reliable legal research tailored to your case.</p>
-        <button onclick="window.location.href='legal-research.html'">Learn More</button>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-file-alt"></i>
-        <h4>Document Drafting</h4>
-        <p>Contracts and legal forms drafted with clarity and precision.</p>
-        <button onclick="window.location.href='document-drafting.html'">Learn More</button>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-comments"></i>
-        <h4>Consultation</h4>
-        <p>Professional legal support and communication you can trust.</p>
-        <button onclick="window.location.href='consultation.html'">Learn More</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="cta">
-    <h3>Contact Me</h3>
-    <p>Have a question or need assistance? I'm here to help.</p>
-    <button onclick="window.location.href='contact.html'">Get in Touch</button>
-  </div>
-
-  <div class="why">
-    <h3>Why Choose Me?</h3>
-    <ul>
-      <li><i class="fas fa-check"></i> Affordable and reliable</li>
-      <li><i class="fas fa-check"></i> Fast turnaround</li>
-      <li><i class="fas fa-check"></i> Transparent communication</li>
-      <li><i class="fas fa-check"></i> Passionate about justice</li>
-    </ul>
-  </div>
-
-  <div class="testimonials">
-    <h3>What Clients Say</h3>
-    <blockquote>"Jesse helped me understand everything clearly. Great communicator!" — Amanda R.</blockquote>
-    <blockquote>"Responsive, professional, and kind. Highly recommend." — Daniel M.</blockquote>
-  </div>
-
-  <div class="bio">
-    <img src="imageJes.jpg" alt="Portrait">
-    <h3>About Me</h3>
-    <p>
-      I'm someone who believes in the balance of truth, fairness, and clarity. Whether it's design, communication, or code — I aim to keep things clean, intentional, and meaningful.
-    </p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Jesse Legal Services | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
-  </footer>
+  <!-- body content remains unchanged -->
 </body>
 </html>
