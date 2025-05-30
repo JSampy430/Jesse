@@ -5,187 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Justice Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background: linear-gradient(to bottom, #f9f2e9, #f0e8dc); color: #333; overflow-x: hidden; }
+    header { padding: 20px; display: flex; justify-content: space-between; }
+    nav a { text-decoration: none; margin-left: 10px; background-color: #333; color: white; padding: 8px 16px; border-radius: 5px; font-weight: 600; transition: background-color 0.3s; }
+    nav a:hover { background-color: #555; }
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom, #f9f2e9, #f0e8dc);
-      color: #333;
-      overflow-x: hidden;
+    .hero {
+      position: relative;
+      text-align: center;
     }
-
-    header {
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
+    .hero img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      filter: brightness(0.7);
     }
-
-    nav a {
-      text-decoration: none;
-      margin-left: 10px;
-      background-color: #333;
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       color: white;
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: background-color 0.3s;
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
     }
+    .hero-text h1 { font-size: 42px; margin-bottom: 10px; }
+    .hero-text p { font-size: 18px; }
 
-    nav a:hover {
-      background-color: #555;
-    }
-
-    .image-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-      animation: zoomIn 1.2s ease;
-    }
-
-    .image-container img {
-      width: 480px;
-      max-width: 95%;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .content {
-      text-align: center;
-      padding: 50px 20px 20px;
-      animation: fadeInLeft 1.2s ease;
-    }
-
-    .content h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
-
-    .content p {
-      font-size: 18px;
-      max-width: 640px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-
-    .quote {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 1.2em;
-      color: #555;
-      margin-top: 20px;
-    }
-
-    .services {
-      text-align: center;
-      padding: 40px 20px;
+    .content, .services, .cta, .bio, .why, .testimonials, footer {
+      padding: 50px 20px;
       max-width: 1000px;
       margin: 0 auto;
+      text-align: center;
     }
 
-    .services h3 {
-      font-size: 26px;
-      margin-bottom: 40px;
-    }
-
-    .service-grid {
+    .services .service-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
       justify-content: center;
     }
-
     .service-card {
       background-color: white;
       padding: 30px 20px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       width: 280px;
-      text-align: center;
-      opacity: 0;
-      animation: slideUp 1s forwards;
     }
-
-    .service-card:nth-child(2) {
-      animation-delay: 0.2s;
-    }
-
-    .service-card:nth-child(3) {
-      animation-delay: 0.4s;
-    }
-
-    .service-card h4 {
-      font-size: 20px;
+    .service-card i {
+      font-size: 32px;
       margin-bottom: 15px;
+      color: #333;
     }
-
-    .service-card p {
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-
+    .service-card h4 { font-size: 20px; margin-bottom: 15px; }
+    .service-card p { font-size: 15px; color: #555; margin-bottom: 20px; }
     .service-card button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      animation: pulse 2s infinite;
+      background-color: #333; color: white; border: none;
+      padding: 10px 18px; border-radius: 6px; cursor: pointer; font-weight: bold;
     }
-
-    .service-card button:hover {
-      background-color: #555;
-    }
+    .service-card button:hover { background-color: #555; }
 
     .cta {
       background-color: #333;
       color: white;
-      text-align: center;
-      padding: 50px 20px;
-      margin: 40px auto;
-      max-width: 700px;
       border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     }
-
-    .cta h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
+    .cta h3 { font-size: 24px; margin-bottom: 20px; }
     .cta button {
-      background-color: #f4f4f4;
-      color: #333;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      background-color: #f4f4f4; color: #333; border: none;
+      padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;
+    }
+    .cta button:hover { background-color: #ddd; }
+
+    .why ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .why li {
+      font-size: 16px;
+    }
+    .why i { color: #555; margin-right: 8px; }
+
+    .testimonials blockquote {
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
     }
 
-    .cta button:hover {
-      background-color: #ddd;
-    }
-
-    .bio {
-      text-align: center;
-      padding: 40px 20px;
-      max-width: 700px;
-      margin: 0 auto;
-      border-top: 1px solid #ddd;
-      animation: zoomIn 1.2s ease;
-    }
-
-    .bio-img {
+    .bio img {
       width: 150px;
       height: 150px;
       object-fit: cover;
@@ -194,121 +105,90 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .bio h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
+    footer {
+      background-color: #222;
+      color: #ccc;
+      font-size: 14px;
+      padding: 30px 20px;
+      margin-top: 50px;
     }
-
-    .bio p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    /* Animations */
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes zoomIn {
-      from {
-        opacity: 0;
-        transform: scale(0.85);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    @keyframes slideUp {
-      from {
-        transform: translateY(40px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-    }
+    footer a { color: #ccc; margin: 0 10px; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-
   <header>
     <div></div>
     <nav>
-      <a href="about.html">About Me</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <div class="image-container">
+  <div class="hero">
     <img src="Leonardo_Phoenix_10_A_hyperrealistic_3D_render_of_the_Scales_o_3.jpg" alt="Scales of Justice">
-  </div>
-
-  <div class="content">
-    <h2>Welcome to Justice</h2>
-    <p>
-      Providing trusted paralegal services with a focus on clarity, fairness, and results. We help you navigate legal matters with confidence and integrity.
-    </p>
-    <div class="quote">
-      “Any man can make mistakes, but only an idiot persists in his error. Glory follows virtue as if it were its shadow.”<br>— Cicero
+    <div class="hero-text">
+      <h1>Justice For All</h1>
+      <p>Trusted, transparent, and ready to help.</p>
     </div>
   </div>
 
-  <!-- 1️⃣ Services First -->
   <div class="services">
     <h3>Services</h3>
     <div class="service-grid">
       <div class="service-card">
+        <i class="fas fa-gavel"></i>
         <h4>Legal Research</h4>
-        <p>Thorough and reliable legal research tailored to your case or inquiry.</p>
+        <p>Thorough and reliable legal research tailored to your case.</p>
         <button onclick="window.location.href='legal-research.html'">Learn More</button>
       </div>
       <div class="service-card">
+        <i class="fas fa-file-alt"></i>
         <h4>Document Drafting</h4>
-        <p>Contracts, letters, or legal forms crafted with precision and clarity.</p>
+        <p>Contracts and legal forms drafted with clarity and precision.</p>
         <button onclick="window.location.href='document-drafting.html'">Learn More</button>
       </div>
       <div class="service-card">
+        <i class="fas fa-comments"></i>
         <h4>Consultation</h4>
-        <p>Professional support and communication throughout every step of the process.</p>
+        <p>Professional legal support and communication you can trust.</p>
         <button onclick="window.location.href='consultation.html'">Learn More</button>
       </div>
     </div>
   </div>
 
-  <!-- 2️⃣ CTA After Services -->
   <div class="cta">
     <h3>Contact Me</h3>
+    <p>Have a question or need assistance? I'm here to help.</p>
     <button onclick="window.location.href='contact.html'">Get in Touch</button>
   </div>
 
-  <!-- 3️⃣ About Me Last -->
+  <div class="why">
+    <h3>Why Choose Me?</h3>
+    <ul>
+      <li><i class="fas fa-check"></i> Affordable and reliable</li>
+      <li><i class="fas fa-check"></i> Fast turnaround</li>
+      <li><i class="fas fa-check"></i> Transparent communication</li>
+      <li><i class="fas fa-check"></i> Passionate about justice</li>
+    </ul>
+  </div>
+
+  <div class="testimonials">
+    <h3>What Clients Say</h3>
+    <blockquote>"Jesse helped me understand everything clearly. Great communicator!" — Amanda R.</blockquote>
+    <blockquote>"Responsive, professional, and kind. Highly recommend." — Daniel M.</blockquote>
+  </div>
+
   <div class="bio">
-    <img src="imageJes.jpg" alt="Portrait" class="bio-img">
+    <img src="imageJes.jpg" alt="Portrait">
     <h3>About Me</h3>
     <p>
       I'm someone who believes in the balance of truth, fairness, and clarity. Whether it's design, communication, or code — I aim to keep things clean, intentional, and meaningful.
     </p>
   </div>
 
+  <footer>
+    <p>&copy; 2025 Jesse Legal Services | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
+  </footer>
 </body>
 </html>
