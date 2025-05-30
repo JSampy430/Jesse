@@ -80,38 +80,6 @@
       margin-top: 20px;
     }
 
-    /* 🔥 CTA Box */
-    .cta {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-      margin: 40px auto;
-      max-width: 700px;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .cta h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .cta button {
-      background-color: #f4f4f4;
-      color: #333;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .cta button:hover {
-      background-color: #ddd;
-    }
-
     .services {
       text-align: center;
       padding: 40px 20px;
@@ -175,6 +143,37 @@
 
     .service-card button:hover {
       background-color: #555;
+    }
+
+    .cta {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin: 40px auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .cta button {
+      background-color: #f4f4f4;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta button:hover {
+      background-color: #ddd;
     }
 
     .bio {
@@ -274,13 +273,7 @@
     </div>
   </div>
 
-  <!-- 🔥 Call to Action -->
-  <div class="cta">
-    <h3>Get in touch today to get started</h3>
-    <button onclick="window.location.href='contact.html'">Contact Us</button>
-  </div>
-
-  <!-- 🔼 Services now appear higher -->
+  <!-- 1️⃣ Services First -->
   <div class="services">
     <h3>Services</h3>
     <div class="service-grid">
@@ -302,7 +295,13 @@
     </div>
   </div>
 
-  <!-- ⬇️ About Me moved below -->
+  <!-- 2️⃣ CTA After Services -->
+  <div class="cta">
+    <h3>Contact Me</h3>
+    <button onclick="window.location.href='contact.html'">Get in Touch</button>
+  </div>
+
+  <!-- 3️⃣ About Me Last -->
   <div class="bio">
     <img src="imageJes.jpg" alt="Portrait" class="bio-img">
     <h3>About Me</h3>
